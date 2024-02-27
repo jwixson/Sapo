@@ -22,7 +22,7 @@
 
 
     <script>
-        require([ "esri/config","esri/Map", "esri/views/MapView", ], (esriConfig, Map, MapView) => {
+        require([ "esri/config","esri/Map", "esri/views/MapView", "esri/widgets/Locate"], (esriConfig, Map, MapView, Locate) => {
 
 
         esriConfig.apiKey = "AAPKf8d644b52cbe4547a6cf52b1dba78051_Xpnbv3L-3KkoIsY1iWO_jYtkKVaijNoYbTnhR3zdus6mF7v3nz5cP8PVYixqbxo";
@@ -37,6 +37,15 @@
             zoom: 10, //set the zoom extent
             center: [29.145558, -83.041544] //centers the map on Cedar Key, FL
         });
+        const locateBtn = new Locate({
+          view: view
+        });
+
+        // Add the locate widget to the top left corner of the view
+        view.ui.add(locateBtn, {
+          position: "top-left"
+        });
+         
         });
     </script>
   </head>
