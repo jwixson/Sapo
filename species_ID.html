@@ -2,51 +2,56 @@
 <html>
 <head>
     <title>Species ID</title>
-    <style>
-        .filterDiv {
-          float: left;
-          background-color: #2196F3;
-          color: #ffffff;
-          width: 100px;
-          line-height: 100px;
-          text-align: center;
-          margin: 2px;
-          display: none;
-        }
-        
-        .show {
-          display: block;
-        }
-        
-        .container {
-          margin-top: 20px;
-          overflow: hidden;
-        }
-        
-        /* Style the buttons */
-        .btn {
-          border: none;
-          outline: none;
-          padding: 12px 16px;
-          background-color: #f1f1f1;
-          cursor: pointer;
-        }
-        
-        .btn:hover {
-          background-color: #ddd;
-        }
-        
-        .btn.active {
-          background-color: #666;
-          color: white;
-        }
-        </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Species ID</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <script>
+        var options = {
+            valueNames: [ 'name', 'born' ]
+        };
+  
+        var userList = new List('users', options);
+    </script>
 </head>
+
 <body>
     <h1>Welcome to Species ID</h1>
-    
+    <div id="users">
 
-    <!-- Control buttons -->
+        <!-- class="search" automagically makes an input a search field. -->
+          <input class="search" placeholder="Search" />
+        <!-- class="sort" automagically makes an element a sort buttons. The date-sort value decides what to sort by. -->
+          <button class="sort" data-sort="name">
+            Sort
+          </button>
+        
+        <!-- Child elements of container with class="list" becomes list items -->
+          <ul class="list">
+            <li>
+        <!-- The innerHTML of children with class="name" becomes this items "name" value -->
+              <h3 class="name">Jonny Stromberg</h3>
+              <p class="born">1986</p>
+            </li>
+            <li>
+              <h3 class="name">Jonas Arnklint</h3>
+              <p class="born">1985</p>
+            </li>
+            <li>
+              <h3 class="name">Martina Elm</h3>
+              <p class="born">1986</p>
+            </li>
+            <li>
+              <h3 class="name">Gustaf Lindqvist</h3>
+              <p class="born">1983</p>
+            </li>
+          </ul>
+        
+        </div>
+
+    <!-- Control buttons --><
 <div id="myBtnContainer">
     <button class="btn active" onclick="filterSelection('all')"> Show all</button>
     <button class="btn" onclick="filterSelection('frogs and toads')"> Frogs and Toads </button>
@@ -116,6 +121,6 @@
         this.className += " active";
       });
     }
-    </script>
+    </script>>
 </body>
 </html>
