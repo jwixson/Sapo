@@ -20,16 +20,25 @@
         float: left;
         background-color: #2196F3;
         color: #ffffff;
-        line-height: 100px;
-        text-align: center;
+        line-height: 50px;
+        text-align: left;
         margin: 10px;
-        display: none;
-        font-size: 12px;
+        display: flex;
         flex:1;
-        padding; 20px;
+        padding: 10px;
         box-sizing: border-box;
+        justify-content: space-between;
       }
-      
+
+      .thumbnail-info, .thumbnail-photo {
+        flex: 1;
+        padding: 10px;
+      }
+      .thumbnail-photo {
+        max-width: 100%;
+        height: auto;
+      }
+
       .show {
         display: block;
       }
@@ -80,7 +89,16 @@
   
   <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
   <div class="container">
-    <div class="filterDiv frogs and toads">Southern Toad (<i>Anaxyrus terrestris</i>)<br><a href="https://en.wikipedia.org/wiki/Southern_toad">Wikipedia page</a> </br><br><a href="https://survey123.arcgis.com/share/c82a166c8e32431795198b1828cd2cbc">This is my Species!</a></br></div>
+    <div class="filterDiv frogs and toads">
+      <div class = "thumbnail-info">
+        <h2>Southern Toad (<i>Anaxyrus terrestris</i>)</h2>
+        <p>some information about the southern toad</p>
+        <br><a href="https://en.wikipedia.org/wiki/Southern_toad">Wikipedia page</a> </br><br><a href="https://survey123.arcgis.com/share/c82a166c8e32431795198b1828cd2cbc">This is my Species!</a></br>
+      </div>
+      <div class="thumbnail-photo">
+        <img src="https://en.wikipedia.org/wiki/Southern_toad#/media/File:Bufo_terrestris_0.jpg" alt="'Southern Toad' photo" style="width:100%">
+      </div>
+    </div>
    
     <div class="filterDiv snakes">Cottonmouth</div>
     <div class="filterDiv salamanders">Frosted Salamander</div>
