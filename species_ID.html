@@ -23,9 +23,12 @@
         width: 100px;
         line-height: 100px;
         text-align: center;
-        margin: 2px;
+        margin: 10px;
         display: none;
         font-size: 12px;
+        flex:1;
+        padding; 20px;
+        box-sizing: border-box;
       }
       
       .show {
@@ -35,6 +38,9 @@
       .container {
         margin-top: 20px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
       }
       
       /* Style the buttons */
@@ -69,6 +75,8 @@
     <button class="btn" onclick="filterSelection('snakes')"> Snakes</button>
     <button class="btn" onclick="filterSelection('lizards')"> Lizards</button>
     <button class="btn" onclick="filterSelection('turtles')"> Turtles</button>
+    <button class="btn" onclick="filterSelection('crocodillians')"> Crocodillians</button>
+
   </div>
   
   <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
@@ -79,7 +87,7 @@
     <div class="filterDiv salamanders">Frosted Salamander</div>
     <div class="filterDiv lizards">Green Anole</div>
     <div class="filterDiv lizards">Brown Anole</div>
-    <div class="filterDiv colors">Blue</div>
+    <div class="filterDiv crocodillians">American Alligator</div>
     <div class="filterDiv animals">Cat</div>
     <div class="filterDiv animals">Dog</div>
     <div class="filterDiv fruits">Melon</div>
