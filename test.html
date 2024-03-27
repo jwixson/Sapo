@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My HTML Page</title>
+    <title>Filter Divs</title>
     <style>
         .hidden {
             display: none;
@@ -9,24 +9,29 @@
     </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>This is a standard HTML file.</p>
+    <div class="red">This is a red div.</div>
+    <div class="blue">This is a blue div.</div>
+    <div class="green">This is a green div.</div>
 
-    <div class="species dog location park color brown">Brown dog in the park</div>
-    <div class="species cat location home color black">Black cat at home</div>
-    <!-- Add more divs as needed -->
+    <form id="colorForm">
+        <label for="color">Enter a color (red, blue, or green):</label>
+        <input type="text" id="color" name="color">
+        <input type="submit" value="Submit">
+    </form>
 
     <script>
-        var species = prompt("What species did you see?");
-        var location = prompt("Where did you see it?");
-        var color = prompt("What color was it?");
+        document.getElementById('colorForm').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-        var divs = document.getElementsByTagName('div');
-        for (var i = 0; i < divs.length; i++) {
-            if (!divs[i].classList.contains(species) || !divs[i].classList.contains(location) || !divs[i].classList.contains(color)) {
-                divs[i].classList.add('hidden');
+            var color = document.getElementById('color').value;
+
+            var divs = document.getElementsByTagName('div');
+            for (var i = 0; i < divs.length; i++) {
+                if (!divs[i].classList.contains(color)) {
+                    divs[i].classList.add('hidden');
+                }
             }
-        }
+        });
     </script>
 </body>
 </html>
