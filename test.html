@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My HTML Page</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <p>This is a standard HTML file.</p>
+
+    <div class="species dog location park color brown">Brown dog in the park</div>
+    <div class="species cat location home color black">Black cat at home</div>
+    <!-- Add more divs as needed -->
+
+    <script>
+        var species = prompt("What species did you see?");
+        var location = prompt("Where did you see it?");
+        var color = prompt("What color was it?");
+
+        var divs = document.getElementsByTagName('div');
+        for (var i = 0; i < divs.length; i++) {
+            if (!divs[i].classList.contains(species) || !divs[i].classList.contains(location) || !divs[i].classList.contains(color)) {
+                divs[i].classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
