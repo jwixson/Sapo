@@ -69,14 +69,14 @@
             });
         const layer = new FeatureLayer({ 
               // URL to the service 
-              url: "https://services.arcgis.com/LBbVDC0hKPAnLRpO/arcgis/rest/services/survey123_c82a166c8e32431795198b1828cd2cbc_results/FeatureServer" 
+              url: "https://services.arcgis.com/LBbVDC0hKPAnLRpO/arcgis/rest/services/survey123_d7d68c8e99a84497833e979a15f39b07_results/FeatureServer" 
             });
 
         const view = new MapView({
             container: "viewDiv", // Reference to the DOM node that will contain the view
             map: map, // References the map object
-            zoom: 10, //set the zoom extent
-            center: [ -83.041544,29.145558] //centers the map on Cedar Key, FL
+            zoom: 5, //set the zoom extent
+            center: [ -82,28] //centers the map on Florida
         });
         const locateBtn = new Locate({
           view: view
