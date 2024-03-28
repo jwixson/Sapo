@@ -3,161 +3,140 @@
 <head>
     <title>Species ID</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Species ID</title>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <style>
+        .list {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            width: 100%;
+        }
+        .list-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .species-thumbnail {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .species-description, .species-image {
+          flex: 1;
+          padding: 10px;
+        }
+
+        .species-image img {
+          max-width: 100%;
+          height: auto;
+        }
+        #search {
+          width: 100%; /* This will make the search bar take up the full width of its container */
+          padding: 10px; /* This will add some padding inside the search bar */
+          font-size: 18px; /* This will make the text inside the search bar bigger */
+        }
+    </style>
+</head>
+<body>
+    <h1>Florida Herpetofauna</h1>
+    <h2>Please search for your species below</br >
+      once you find it record your sighting using this <a href="https://arcg.is/1WT5qT" >Link</a></h2>
+
+    <input type="text" id="search" placeholder="Search">
+    <div id="speciesList">
+        <ul class="list">
+            <li class="list-item">
+              <div class="species-info">
+                <h3 class="name">Toad</h3>
+                <div class="species-thumbnail">
+                  <div class="species-description">
+                    <h4 class="species">Southern Toad</h4>
+                    <p>A brief description of the Southern Toad...</p>
+                    <a href="https://en.wikipedia.org/wiki/Southern_toad" >Wikipedia</a>
+                    <a href="https://amphibiaweb.org/cgi/amphib_query?where-genus=Anaxyrus&where-species=terrestris&account=mol" >Amphibiaweb</a>
+                    <a href="https://berkeleymapper.berkeley.edu/index.html?tabfile=https://amphibiaweb.org/tmpfiles/981369&configfile=https://amphibiaweb.org/tmpfiles/bm_config_430031.xml&ViewResults=tab&sourcename=AmphibiaWeb+Species+Map:+Anaxyrus+terrestris&amphibiaweb=true&label=1&opacity=0.50&pointDisplay=pointMarkers" >BerkeleyMapper</a>
+
+
+                  </div>
+                  <div class="species-image">
+                    <img src="https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/108/2018/11/southern-toad-dark-krysko.jpg" alt="Southern Toad">
+                  </div>
+                </div>
+              </div>
+            <li class="list-item">
+              <div class="species-info">
+                  <h3 class="name">Frog</h3>
+                  <div class="species-thumbnail">
+                      <div class="species-description">
+                          <h4 class="species">Green Treefrog</h4>
+                          <p>A brief description of the Green Treefrog...</p>
+                      </div>
+                      <div class="species-image">
+                          <img src="https://www.treehugger.com/thmb/Dtu_Soe6qy_uB30u7bQ6sfRNw1k=/3072x2304/filters:no_upscale():max_bytes(150000):strip_icc()/american-green-tree-frog-02-ac540f4ce5574825b60349db1ee9a5b9.jpg" alt="Green Treefrog">
+                      </div>
+                  </div>
+              </div>
+            </li>
+            <li class="list-item">
+              <div class="species-info">
+                  <h3 class="name">Snake</h3>
+                  <div class="species-thumbnail">
+                      <div class="species-description">
+                          <h4 class="species">Eastern Diamondback Rattlesnake</h4>
+                          <p>A brief description of the Eastern Diamondback Rattlesnake...</p>
+                      </div>
+                      <div class="species-image">
+                          <img src="https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/108/2018/11/eastern-diamondback-rattlesnake-krysko.jpg" alt="Eastern Diamondback Rattlesnake">
+                      </div>
+                  </div>
+              </div>
+            </li>
+            <li class="list-item">
+              <div class="species-info">
+                <h3 class="name">Snake</h3>
+                <div class="species-thumbnail">
+                  <div class="species-description">
+                    <h4 class="species">Florida Cottonmouth</h4>
+                    <p>A brief description of the Florida Cottonmouth...</p>
+                    <a href="https://en.wikipedia.org/wiki/Agkistrodon_piscivorus" >Wikipedia</a>
+                    <a href="https://amphibiaweb.org/cgi/amphib_query?where-genus=Agkistrodon&where-species=piscivorus&account=mol" >Amphibiaweb</a>
+                    <a href="https://berkeleymapper.berkeley.edu/index.html?tabfile=https://amphibiaweb.org/tmpfiles/981369&configfile=https://amphibiaweb.org/tmpfiles/bm_config_430031.xml&ViewResults=tab&sourcename=AmphibiaWeb+Species+Map:+Agkistrodon+piscivorus&amphibiaweb=true&label=1&opacity=0.50&pointDisplay=pointMarkers" >BerkeleyMapper</a>
+                  </div>
+                  <div class="species-image">
+                    <img src="https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/108/2018/11/florida-cottonmouth-krysko.jpg" alt="Florida Cottonmouth">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-item">
+              <div class="species-info">
+                <h3 class="name">Crocodilians</h3>
+                <div class="species-thumbnail">
+                  <div class="species-description">
+                    <h4 class="species">American Alligator</h4>
+                    <p>A brief description of the American Alligator...</p>
+                    <a href="https://en.wikipedia.org/wiki/American_alligator">Wikipedia</a>
+                    <a href="https://amphibiaweb.org/cgi/amphib_query?where-genus=Alligator&where-species=mississippiensis&account=mol">Amphibiaweb</a>
+                    <a href="https://berkeleymapper.berkeley.edu/index.html?tabfile=https://amphibiaweb.org/tmpfiles/981369&configfile=https://amphibiaweb.org/tmpfiles/bm_config_430031.xml&ViewResults=tab&sourcename=AmphibiaWeb+Species+Map:+Alligator+mississippiensis&amphibiaweb=true&label=1&opacity=0.50&pointDisplay=pointMarkers">BerkeleyMapper</a>
+                  </div>
+                  <div class="species-image">
+                    <img src="https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/108/2018/11/american-alligator-krysko.jpg" alt="American Alligator">
+                  </div>
+                </div>
+              </div>
+            </li>
+
+        </ul>
+    </div>
+
     <script>
         var options = {
-            valueNames: [ 'name', 'born' ]
+            valueNames: [ 'name', 'species' ]
         };
-  
-        var userList = new List('users', options);
+
+        var speciesList = new List('speciesList', options);
+
+        document.getElementById('search').addEventListener('keyup', function(event) {
+            speciesList.search(event.target.value);
+        });
     </script>
-    <style>
-      .filterDiv {
-        float: left;
-        background-color: #2196F3;
-        color: #ffffff;
-        line-height: 50px;
-        text-align: left;
-        margin: 10px;
-        display: flex;
-        flex:1;
-        padding: 10px;
-        box-sizing: border-box;
-        justify-content: space-between;
-      }
-
-      .thumbnail-info, .thumbnail-photo {
-        flex: 1;
-        padding: 10px;
-      }
-      .thumbnail-photo {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .show {
-        display: block;
-      }
-      
-      .container {
-        margin-top: 20px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items:stretch;
-      }
-      
-      /* Style the buttons */
-      .btn {
-        border: none;
-        outline: none;
-        padding: 12px 16px;
-        background-color: #f1f1f1;
-        cursor: pointer;
-      }
-      
-      .btn:hover {
-        background-color: #ddd;
-      }
-      
-      .btn.active {
-        background-color: #666;
-        color: white;
-      }
-      </style>
-</head>
-
-<body>
-    <h1>Welcome to Species ID</h1>
-    
-
-    <!-- Control buttons --><
-<div id="myBtnContainer">
-    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-    <button class="btn" onclick="filterSelection('frogs and toads')"> Frogs and Toads </button>
-    <button class="btn" onclick="filterSelection('salamanders')"> Salamanders</button>
-    <button class="btn" onclick="filterSelection('snakes')"> Snakes</button>
-    <button class="btn" onclick="filterSelection('lizards')"> Lizards</button>
-    <button class="btn" onclick="filterSelection('turtles')"> Turtles</button>
-    <button class="btn" onclick="filterSelection('crocodillians')"> Crocodillians</button>
-
-  </div>
-  
-  <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
-  <div class="container">
-    <div class="filterDiv frogs and toads">
-      <div class = "thumbnail-info">
-        <h2>Southern Toad (<i>Anaxyrus terrestris</i>)</h2>
-        <p>some information about the southern toad</p>
-        <br><a href="https://en.wikipedia.org/wiki/Southern_toad">Wikipedia page</a> </br><br><a href="https://survey123.arcgis.com/share/c82a166c8e32431795198b1828cd2cbc">This is my Species!</a></br>
-      </div>
-      <div class="thumbnail-photo">
-        <img src="https://en.wikipedia.org/wiki/Southern_toad#/media/File:Bufo_terrestris_0.jpg" alt="'Southern Toad' photo" style="width:100%">
-      </div>
-    </div>
-   
-    <div class="filterDiv snakes">Cottonmouth</div>
-    <div class="filterDiv salamanders">Frosted Salamander</div>
-    <div class="filterDiv lizards">Green Anole</div>
-    <div class="filterDiv lizards">Brown Anole</div>
-    <div class="filterDiv crocodillians">American Alligator</div>
-    <div class="filterDiv animals">Cat</div>
-    <div class="filterDiv animals">Dog</div>
-    <div class="filterDiv fruits">Melon</div>
-    <div class="filterDiv fruits animals">Kiwi</div>
-    <div class="filterDiv fruits">Banana</div>
-    <div class="filterDiv fruits">Lemon</div>
-    <div class="filterDiv animals">Cow</div>
-  </div>
-
-
-  <script>
-    filterSelection("all")
-    function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("filterDiv");
-      if (c == "all") c = "";
-      for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-      }
-    }
-    
-    function w3AddClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-      }
-    }
-    
-    function w3RemoveClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);     
-        }
-      }
-      element.className = arr1.join(" ");
-    }
-    
-    // Add active class to the current button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-    </script>>
 </body>
 </html>
