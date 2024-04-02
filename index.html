@@ -59,18 +59,26 @@
 
 
     <script>
-        require([ "esri/config","esri/Map", "esri/views/MapView", "esri/widgets/Locate", "esri/widgets/Search", "esri/layers/FeatureLayer"], (esriConfig, Map, MapView, Locate, Search, FeatureLayer) => {
+        <script>
+          require(["esri/config","esri/Map", "esri/views/MapView", "esri/widgets/Locate", "esri/widgets/Search", "esri/layers/FeatureLayer"], (esriConfig, Map, MapView, Locate, Search, FeatureLayer) => {
 
+          esriConfig.apiKey = "AAPKf8d644b52cbe4547a6cf52b1dba78051_Xpnbv3L-3KkoIsY1iWO_jYtkKVaijNoYbTnhR3zdus6mF7v3nz5cP8PVYixqbxo";
 
-        esriConfig.apiKey = "AAPKf8d644b52cbe4547a6cf52b1dba78051_Xpnbv3L-3KkoIsY1iWO_jYtkKVaijNoYbTnhR3zdus6mF7v3nz5cP8PVYixqbxo";
-
-        const map = new Map({
-                basemap: "satellite"
+          const map = new Map({
+              basemap: "satellite"
             });
-        const layer = new FeatureLayer({ 
+
+          const template = {
+            title: "Feature Attributes",
+            content: "{*}"
+          };
+
+          const layer = new FeatureLayer({ 
               // URL to the service 
-              url: "https://services.arcgis.com/LBbVDC0hKPAnLRpO/arcgis/rest/services/survey123_d7d68c8e99a84497833e979a15f39b07_results/FeatureServer" 
+              url: "https://services.arcgis.com/LBbVDC0hKPAnLRpO/arcgis/rest/services/survey123_d7d68c8e99a84497833e979a15f39b07_results/FeatureServer",
+              popupTemplate: template
             });
+
 
         const view = new MapView({
             container: "viewDiv", // Reference to the DOM node that will contain the view
