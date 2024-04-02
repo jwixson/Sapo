@@ -69,7 +69,33 @@
 
           const template = {
             title: "Feature Attributes",
-            content: "{*}"
+            content: [
+            {
+                type: "fields",
+                fieldInfos: [
+                    {
+                        fieldName: "animal_type",
+                        label: "Animal Type"
+                    },
+                    {
+                        fieldName: "animal_common_name",
+                        label: "Common Name"
+                    },
+                    {
+                        fieldName: "animal_age",
+                        label: "Animal Age"
+                    },
+                    {
+                        fieldName: "habitat_type",
+                        label: "Habitat Type"
+                    },
+                    {
+                        fieldName: "animal_count",
+                        label: "Animal Count"
+                    }
+                ]
+            }
+        ]
           };
 
           const layer = new FeatureLayer({ 
