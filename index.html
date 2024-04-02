@@ -98,8 +98,19 @@
                         label: "Photos And Files"
                     }
                 ]
+              },
+              {
+                type: "media",
+                mediaInfos: [
+                    {
+                        type: "image",
+                        value: {
+                            sourceURL: "{photo_url_field}"
+                        }
+                    }
+                ]
             }
-        ]
+            ]
           };
 
           const layer = new FeatureLayer({ 
