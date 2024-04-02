@@ -105,7 +105,7 @@
                     {
                         type: "image",
                         value: {
-                            sourceURL: "{photo_url_field}"
+                            sourceURL: "{attachments}"
                         }
                     }
                 ]
@@ -116,7 +116,8 @@
           const layer = new FeatureLayer({ 
               // URL to the service 
               url: "https://services.arcgis.com/LBbVDC0hKPAnLRpO/arcgis/rest/services/survey123_d7d68c8e99a84497833e979a15f39b07_results/FeatureServer",
-              popupTemplate: template
+              popupTemplate: template,
+              attachments: true
             });
 
 
